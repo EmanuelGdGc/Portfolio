@@ -1,0 +1,65 @@
+.about-section {
+  max-width: 500px !important;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 200px 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 2.5rem;
+  width: 100%; /* Cambio a 100% para que respete el max-width del padre */
+}
+
+.foto {
+  flex-shrink: 0;
+}
+
+.ImagenMarca {
+  border-radius: 50%;
+  width: 100px; /* Ajustado a 80px como en el HTML */
+  height: 100px; /* Ajustado a 80px como en el HTML */
+  object-fit: cover;
+}
+
+.about-titles {
+  text-align: left;
+}
+
+.about-titles h1 {
+  color: #e2e8f0;
+  margin: 0 0 5px 0;
+  font-size: 22px;
+}
+
+.about-titles h3 {
+  color: #e2e8f0;
+  margin: 0;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.about-me {
+  width: 100%;
+  max-width: 500px; /* Ajustado a 500px para consistencia */
+}
+
+.about-me h3 {
+  color: #e2e8f0;
+  margin: 0 0 15px 0;
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+}
+
+.about-me p {
+  color: #e2e8f0;
+  line-height: 1.6;
+  font-size: 14px;
+}

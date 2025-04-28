@@ -1,0 +1,175 @@
+.others-section {
+  max-width: 500px !important;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.others-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.others-container h3 {
+  color: #e2e8f0;
+  margin: 0 0 1.5rem 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.achievementBox {
+  display: flex;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.achievementYear {
+  width: 120px;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.achievementYear p {
+  color: #e2e8f0;
+  font-size: 14px;
+  margin: 0 0 10px 0;
+}
+
+.achievementText {
+  flex-grow: 1;
+}
+
+.achievement-title {
+  color: #e2e8f0;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 0 8px 0;
+}
+
+.achievement-description {
+  color: #a0aec0;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.media-container {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.certificates-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.certificate-box {
+  flex: 1;
+  max-width: calc(50% - 0.5rem);
+  text-align: center;
+}
+
+.certificate-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.certificate-box img:hover {
+  transform: scale(1.05);
+}
+
+.certificate-caption {
+  color: #a0aec0;
+  font-size: 12px;
+  margin-top: 0.5rem;
+}
+
+.videos-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.videos-wrapper iframe {
+  width: calc(50% - 0.5rem);
+  height: 140px;
+  border-radius: 4px;
+}
+
+/* Para cuando solo hay un video */
+.videos-wrapper:has(iframe:only-child) {
+  justify-content: center;
+}
+
+.videos-wrapper:has(iframe:only-child) iframe {
+  width: 60%;
+}
+
+a{
+  text-decoration: inherit;
+  color: white;
+}
+
+/* Estilos del Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: auto;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  animation: zoom 0.6s;
+}
+
+.close-modal {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#imageCaption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* Efecto hover en las imágenes para indicar que son clickeables */
+.certificate-box img {
+  cursor: pointer;
+}

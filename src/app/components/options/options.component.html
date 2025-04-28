@@ -1,0 +1,21 @@
+<div class="corner-menu-container">
+  <button class="corner-button" (click)="toggleMenu()">
+    <img
+      src="assets/icons/MarcaPersonal.png"
+      alt="Marca Personal"
+      class="corner-icon"
+    />
+    <span class="button-label">Opciones</span>
+  </button>
+
+  <div class="options-menu" [ngClass]="{ active: isMenuOpen }">
+    <div class="menu-item" (click)="toggleTheme()">
+      <i class="menu-icon">🌓</i>
+      <span>{{ 'MENU.THEME' | translate }}</span>
+    </div>
+    <div class="menu-item" (click)="toggleLanguage()">
+      <i class="menu-icon">🌐</i>
+      <span>{{ 'MENU.LANGUAGE' | translate }}</span>
+    </div>
+  </div>
+</div>
