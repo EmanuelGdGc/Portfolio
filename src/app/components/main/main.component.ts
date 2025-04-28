@@ -7,6 +7,7 @@ import { OthersComponent } from '../others/others.component';
 import { StudyComponent } from '../study/study.component';
 import { ContactComponent } from '../contact/contact.component';
 import { OptionsMenuComponent } from '../options/options.component';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-main',
@@ -19,6 +20,7 @@ import { OptionsMenuComponent } from '../options/options.component';
     StudyComponent,
     ContactComponent,
     OptionsMenuComponent,
+    HeaderComponent
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css',

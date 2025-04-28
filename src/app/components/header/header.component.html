@@ -1,0 +1,26 @@
+<header class="header">
+  <div class="header-left">
+    <img src="assets/images/logo.png" alt="Logo personal" class="logo">
+    <h1>Tu Nombre</h1>
+  </div>
+  
+  <nav class="header-center">
+    <ul>
+      <li><a href="#home" data-scroll>Inicio</a></li>
+      <li><a href="#about" data-scroll>Sobre mí</a></li>
+      <li><a href="#projects" data-scroll>Proyectos</a></li>
+      <li><a href="#skills" data-scroll>Habilidades</a></li>
+      <li><a href="#contact" data-scroll>Contacto</a></li>
+    </ul>
+  </nav>
+
+  <div class="header-right">
+    <button (click)="toggleTheme()" class="theme-toggle">
+      <i class="fas fa-sun" *ngIf="isDarkMode"></i>
+      <i class="fas fa-moon" *ngIf="!isDarkMode"></i>
+    </button>
+    <button (click)="toggleLanguage()" class="lang-toggle">
+      {{ currentLang === 'es' ? 'EN' : 'ES' }}
+    </button>
+  </div>
+</header>
