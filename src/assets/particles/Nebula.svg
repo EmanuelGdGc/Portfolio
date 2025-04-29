@@ -1,0 +1,20 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradiente central de la nebulosa -->
+  <radialGradient id="nebulaGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+    <stop offset="0%" stop-color="white" stop-opacity="1"/>
+    <stop offset="40%" stop-color="white" stop-opacity="0.8"/>
+    <stop offset="70%" stop-color="white" stop-opacity="0.3"/>
+    <stop offset="100%" stop-color="white" stop-opacity="0"/>
+  </radialGradient>
+  
+  <!-- Círculo principal con gradiente -->
+  <circle cx="50" cy="50" r="40" fill="url(#nebulaGradient)" filter="url(#nebula-glow)"/>
+  
+  <!-- Efecto de resplandor para la nebulosa -->
+  <defs>
+    <filter id="nebula-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+</svg>

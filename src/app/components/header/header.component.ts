@@ -9,33 +9,18 @@ import SimpleParallax from 'simple-parallax-js';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  isDarkMode = false;
+  isDarkMode = true;
   currentLang = 'es';
 
   ngOnInit() {
-    this.initializeParallax();
-  }
-
-  initializeParallax() {
-    document.querySelectorAll('a[data-scroll]').forEach(anchor => {
-      anchor.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = (e.currentTarget as HTMLAnchorElement).getAttribute('href')?.substring(1);
-        const targetElement = document.getElementById(targetId || '');
-        
-        if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
+    // Establece el tema oscuro por defecto
+    document.body.classList.add('dark-theme');
   }
 
   toggleTheme() {
     this.isDarkMode = !this.isDarkMode;
     document.body.classList.toggle('dark-theme');
+    document.body.classList.toggle('light-theme');
   }
 
   toggleLanguage() {

@@ -1,0 +1,23 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Resplandor central -->
+  <circle cx="50" cy="50" r="10" fill="white" filter="url(#glow)" />
+  
+  <!-- Rayos de luz -->
+  <path d="M 50 15 L 50 85" stroke="white" stroke-width="1.5" opacity="0.8" />
+  <path d="M 15 50 L 85 50" stroke="white" stroke-width="1.5" opacity="0.8" />
+  <path d="M 25 25 L 75 75" stroke="white" stroke-width="1" opacity="0.6" />
+  <path d="M 25 75 L 75 25" stroke="white" stroke-width="1" opacity="0.6" />
+  
+  <!-- Definir el efecto de resplandor -->
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feFlood flood-color="white" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+</svg>
