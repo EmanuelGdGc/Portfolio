@@ -1,26 +1,28 @@
 <header class="header">
-  <div class="header-left">
-    <img src="assets/images/logo.png" alt="Logo personal" class="logo">
-    <h1>Tu Nombre</h1>
-  </div>
-  
-  <nav class="header-center">
-    <ul>
-      <li><a href="#home" data-scroll>Inicio</a></li>
-      <li><a href="#about" data-scroll>Sobre mí</a></li>
-      <li><a href="#projects" data-scroll>Proyectos</a></li>
-      <li><a href="#skills" data-scroll>Habilidades</a></li>
-      <li><a href="#contact" data-scroll>Contacto</a></li>
-    </ul>
-  </nav>
+  <div class="container">
+    <a href="#" class="logo">
+      <img src="assets/icons/IcoTitle.webp" alt="Logo personal" class="logo-icon">
+      <span class="logo-text">Emanuel Gómez Díaz</span>
+    </a>
+    
+    <nav class="nav-links">
+      <a href="#about" class="nav-item" data-scroll>Sobre mí</a>
+      <a href="#experience" class="nav-item" data-scroll>Experiencia</a>
+      <a href="#projects" class="nav-item" data-scroll>Proyectos</a>
+      <a href="#others" class="nav-item" data-scroll>Otros</a>
+      <a href="#study" class="nav-item" data-scroll>Stack</a>
+      <a href="#contact" class="nav-item" data-scroll>Contacto</a>
+    </nav>
 
-  <div class="header-right">
-    <button (click)="toggleTheme()" class="theme-toggle">
-      <i class="fas fa-sun" *ngIf="isDarkMode"></i>
-      <i class="fas fa-moon" *ngIf="!isDarkMode"></i>
-    </button>
-    <button (click)="toggleLanguage()" class="lang-toggle">
-      {{ currentLang === 'es' ? 'EN' : 'ES' }}
-    </button>
+    <div class="header-actions">
+      <button (click)="toggleTheme()" class="icon-button" aria-label="Cambiar tema">
+        <i class="ri-sun-line" *ngIf="isDarkMode"></i>
+        <i class="ri-moon-line" *ngIf="!isDarkMode"></i>
+      </button>
+      <button (click)="toggleLanguage()" class="icon-button" aria-label="Cambiar idioma">
+        <i class="ri-global-line"></i>
+        <span>{{ currentLang === 'es' ? 'EN' : 'ES' }}</span>
+      </button>
+    </div>
   </div>
 </header>
